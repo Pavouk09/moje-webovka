@@ -1,12 +1,63 @@
+
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Webová Stránka</title>
+    <title>Rainbow Flash</title>
+    <style>
+        /* Ensure the page takes up full height */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Rainbow flashing background */
+        body {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%; /* Smooth color transition */
+            animation: rainbowFlash 5s ease infinite; /* Flash every 5 seconds */
+        }
+
+        /* Center the word */
+        .content {
+            position: absolute;
+            text-align: center;
+            font-size: 5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Rainbow animation keyframes */
+        @keyframes rainbowFlash {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Vítejte na mé stránce!</h1>
-    <p>Tohle je ukázka webové stránky hostované na GitHub Pages.</p>
+    <div class="content">
+        <h1>FLASH</h1> <!-- This is the word in the middle -->
+    </div>
 </body>
 </html>
+
